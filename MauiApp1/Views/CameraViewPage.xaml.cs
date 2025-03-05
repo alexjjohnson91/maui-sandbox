@@ -23,6 +23,7 @@ namespace MauiApp1
         {
             await MyCamera.CaptureImage(CancellationToken.None);
             MyImage.IsVisible = true;
+            Retake.IsVisible = true;
             MyCamera.IsVisible = false;
             Button.IsVisible = false;
         }
@@ -30,6 +31,7 @@ namespace MauiApp1
         private void Retake_Clicked(object sender, EventArgs e)
         {
             MyImage.IsVisible = false;
+            Retake.IsVisible = false;
             MyCamera.IsVisible = true;
             Button.IsVisible = true;
         }
