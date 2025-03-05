@@ -65,7 +65,39 @@
                     <TapGestureRecognizer Tapped="Retake_Clicked" />
                 </Border.GestureRecognizers>
             </Border>
+            <Border
+                x:Name="UsePhoto"
+                BackgroundColor="LightBLue"
+                Padding="10,5"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0.95, 0.95, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+
+                <Label Text="Use Photo"
+                       TextColor="White"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="UsePhoto_Clicked" />
+                </Border.GestureRecognizers>
+            </Border>
         </AbsoluteLayout>
+
+        <AbsoluteLayout Grid.Row="0" ZIndex="4">
+            <!-- Scanning Line (Initially Hidden) -->
+            <BoxView
+                x:Name="ScanningLine"
+                BackgroundColor="Red"
+                HeightRequest="4"
+                WidthRequest="400"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0.5, 0, 0.8, AutoSize"
+                AbsoluteLayout.LayoutFlags="XProportional" />
+        </AbsoluteLayout>
+
 
     </Grid>
 </ContentPage>

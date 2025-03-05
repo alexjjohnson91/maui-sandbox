@@ -35,5 +35,28 @@ namespace MauiApp1
             MyCamera.IsVisible = true;
             Button.IsVisible = true;
         }
+
+        private async void UsePhoto_Clicked(object sender, EventArgs e)
+        {
+            Retake.IsVisible = false;
+            UsePhoto.IsVisible = false;
+            await ShowScanningAnimation();
+        }
+
+        private async Task ShowScanningAnimation()
+        {
+            ScanningLine.IsVisible = true;
+
+            double imageHeight = MyImage.Height;
+
+            for (int i = 0; i < 3; i++) // Run animation 3 times
+            {
+                await ScanningLine.TranslateTo(ScanningLine.X, imageHeight - 5, 1000, Easing.Linear);
+                await ScanningLine.TranslateTo(ScanningLine.X, 0, 1000, Easing.Linear);
+            }
+
+            ScanningLine.IsVisible = false;
+        }
+
     }
 }
