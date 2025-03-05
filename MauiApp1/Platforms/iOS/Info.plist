@@ -29,6 +29,10 @@
 	<key>XSAppIconAssets</key>
 	<string>Assets.xcassets/appicon.appiconset</string>
 	<key>NSCameraUsageDescription</key>
-	<string></string>
+	<string>This app wants to use the camera to take pretty pictures of you!</string>
+  <key>UIBackgroundModes</key>
+  <array>
+    <string>fetch</string>
+  </array>
 </dict>
 </plist>
