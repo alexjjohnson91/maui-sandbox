@@ -17,8 +17,7 @@
             Grid.Row="1"
             x:Name="MyImage"
             Aspect="AspectFit"
-            ZIndex="1"
-            />
+            ZIndex="1" />
 
 
         <toolkit:CameraView
@@ -40,7 +39,30 @@
                 AbsoluteLayout.LayoutBounds=".5, .9, AutoSize, AutoSize"
                 AbsoluteLayout.LayoutFlags="PositionProportional">
                 <Border.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="Button_Clicked"/>
+                    <TapGestureRecognizer Tapped="Button_Clicked" />
+                </Border.GestureRecognizers>
+            </Border>
+        </AbsoluteLayout>
+
+        <AbsoluteLayout Grid.Row="2" ZIndex="3">
+            <!-- Retake Button in Bottom-Left -->
+            <Border
+                x:Name="Retake"
+                BackgroundColor="LightGreen"
+                Padding="10,5"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0.05, 0.95, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional">
+
+                <Label Text="Retake"
+                       TextColor="White"
+                       FontSize="16"
+                       FontAttributes="Bold"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center" />
+
+                <Border.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="Retake_Clicked" />
                 </Border.GestureRecognizers>
             </Border>
         </AbsoluteLayout>
