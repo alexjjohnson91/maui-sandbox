@@ -1,23 +1,20 @@
-﻿namespace MauiApp1;
+﻿using MauiApp1.ViewModels;
 
-public partial class MainPage : ContentPage
+namespace MauiApp1;
+
+public partial class MainPage
 {
-    int count = 0;
 
     public MainPage()
     {
         InitializeComponent();
+        BindingContext = new MainPageViewModel();
     }
 
-    private void OnCounterClicked(object sender, EventArgs e)
+
+    private void Scan_Receipt_OnClicked(object? sender, EventArgs e)
     {
-        count++;
-
-        if (count == 1)
-            CounterBtn.Text = $"Clicked {count} time";
-        else
-            CounterBtn.Text = $"Clicked {count} times";
-
-        SemanticScreenReader.Announce(CounterBtn.Text);
+        ScanReceipt.IsVisible = false;
+        RecognizedText.IsVisible = true;
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
 using CommunityToolkit.Maui;
+using Plugin.Maui.OCR;
 
 namespace MauiApp1;
 
@@ -10,6 +11,7 @@ public static class MauiProgram
         var builder = MauiApp.CreateBuilder();
         builder
             .UseMauiApp<App>()
+            .UseOcr()
             .UseMauiCommunityToolkit()
             .UseMauiCommunityToolkitCamera()
             .ConfigureFonts(fonts =>
