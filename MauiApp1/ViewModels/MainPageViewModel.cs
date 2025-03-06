@@ -15,9 +15,11 @@ public partial class MainPageViewModel : ObservableObject
 
     [ObservableProperty] private String recognizedText;
 
-    public MainPageViewModel()
+    public MainPageViewModel(ImageSource capturedImage, String recognizedText)
     {
         _ = InitializeOcr();
+        this.capturedImage = capturedImage;
+        this.recognizedText = recognizedText;
     }
 
     private static async Task InitializeOcr()

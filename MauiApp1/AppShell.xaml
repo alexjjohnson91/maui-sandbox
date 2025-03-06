@@ -14,12 +14,6 @@
                 ContentTemplate="{DataTemplate local:MainPage}"
                 Route="MainPage" />
         </Tab>
-        <Tab Title="Cam">
-            <ShellContent
-                Title="Home"
-                ContentTemplate="{DataTemplate local:CameraViewPage}"
-                Route="MainPage" />
-        </Tab>
     </TabBar>
 
 </Shell>
