@@ -8,6 +8,7 @@
             Padding="30,0"
             Spacing="25">
             <Image
+                x:Name="ReceiptImage"
                 Source="{Binding CapturedImage}" />
 
             <Button
